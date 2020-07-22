@@ -16,7 +16,7 @@
     $subject = "You have a message from your Bitmap Photography.";
 
     $logo = 'img/logo.png';
-    $link = '#';
+    $link = 'subrahmanyamanigadde@gmail.com';
 
 	$body = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Express Mail</title></head><body>";
 	$body .= "<table style='width: 100%;'>";
