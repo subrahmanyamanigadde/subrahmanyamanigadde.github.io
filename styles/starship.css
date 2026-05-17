@@ -24,6 +24,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -56,6 +57,16 @@ a {
 img {
   display: block;
   max-width: 100%;
+}
+
+section,
+article,
+aside,
+div,
+nav,
+main,
+footer {
+  min-width: 0;
 }
 
 button,
@@ -278,6 +289,7 @@ main {
 
 .terminal-shell {
   width: min(760px, 100%);
+  max-width: 100%;
   overflow: hidden;
 }
 
@@ -308,6 +320,7 @@ main {
 
 .terminal-body {
   padding: clamp(26px, 4vw, 46px);
+  min-width: 0;
 }
 
 .eyebrow,
@@ -333,6 +346,11 @@ h1 {
   font-size: clamp(2.8rem, 6.4vw, 5.65rem);
   line-height: 0.92;
   text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+
+h1 span {
+  display: block;
 }
 
 h2 {
@@ -351,6 +369,7 @@ h3 {
   max-width: 720px;
   color: var(--muted);
   font-size: clamp(1rem, 2vw, 1.2rem);
+  overflow-wrap: anywhere;
 }
 
 .ai-output {
@@ -1002,7 +1021,14 @@ kbd {
   }
 
   .hero {
-    padding: 104px 14px 54px;
+    width: 100%;
+    padding: 104px 12px 54px;
+    overflow: hidden;
+  }
+
+  .hero .terminal-shell {
+    width: 100%;
+    max-width: calc(100vw - 24px);
   }
 
   .terminal-shell,
@@ -1028,9 +1054,9 @@ kbd {
   }
 
   h1 {
-    max-width: 10ch;
-    font-size: clamp(2.35rem, 13vw, 3.35rem);
-    line-height: 0.96;
+    max-width: none;
+    font-size: clamp(2.05rem, 10.6vw, 2.9rem);
+    line-height: 1;
   }
 
   h2 {
@@ -1051,7 +1077,7 @@ kbd {
   }
 
   .terminal-body {
-    padding: 20px;
+    padding: 18px;
   }
 
   .ai-output {
@@ -1085,6 +1111,8 @@ kbd {
 
   .content-module {
     width: min(100% - 28px, 560px);
+    max-width: calc(100vw - 28px);
+    margin-inline: auto;
     padding: 64px 0;
     scroll-margin-top: 104px;
   }
@@ -1185,6 +1213,8 @@ kbd {
 
   .site-footer {
     width: min(100% - 28px, 560px);
+    max-width: calc(100vw - 28px);
+    margin-inline: auto;
     padding: 28px 0 44px;
   }
 }
@@ -1202,7 +1232,7 @@ kbd {
   }
 
   h1 {
-    font-size: clamp(2.1rem, 12vw, 2.75rem);
+    font-size: clamp(1.86rem, 10vw, 2.35rem);
   }
 
   .terminal-body,
