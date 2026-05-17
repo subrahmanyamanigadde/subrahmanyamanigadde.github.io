@@ -1,548 +1,348 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="icon" href="img/favicon.png" type="image/png">
-        <title>Meet Subrahmanya Gaonkar</title>
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="vendors/linericon/style.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-        <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
-        <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-        <link rel="stylesheet" href="vendors/animate-css/animate.css">
-        <link rel="stylesheet" href="vendors/popup/magnific-popup.css">
-        <link rel="stylesheet" href="vendors/flaticon/flaticon.css">
-        <!-- main css -->
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/responsive.css">
-    </head>
-    <body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Subrahmanya Gaonkar portfolio: Fivetran Customer Support Engineer, data integration specialist, Automation and Robotics graduate, and AMFI registered Mutual Fund Distributor.">
+    <meta name="theme-color" content="#020712">
+    <meta property="og:title" content="Subrahmanya Gaonkar | Starship AI Terminal">
+    <meta property="og:description" content="A cinematic mission-control portfolio for Subrahmanya Gaonkar.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://subrahmanyamanigadde.github.io/">
+    <meta property="og:image" content="assets/images/captain-subrahmanya.jpg">
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="styles/starship.css">
+    <title>Subrahmanya Gaonkar | Starship AI Terminal</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#captain-profile">Skip to portfolio modules</a>
 
-        <!--================Header Menu Area =================-->
-        <header class="header_area">
-            <div class="main_menu">
-            	<nav class="navbar navbar-expand-lg navbar-light">
-					<div class="container box_1620">
-						<!-- Brand and toggle get grouped for better mobile display -->
-						<a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-							<ul class="nav navbar-nav menu_nav ml-auto">
-								<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-								<!--<li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li> -->
-							<!--	<li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-								<li class="nav-item submenu dropdown">
-									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
-									<ul class="dropdown-menu">
-										<li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-										<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
-									</ul>
-								</li>
-								<li class="nav-item submenu dropdown">
-									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
-									<ul class="dropdown-menu">
-										<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-										<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
-									</ul>
-								</li> -->
-								<li class="nav-item"><a class="nav-link" href="contact.html">Contact Me</a></li>
-							</ul>
-						</div>
-					</div>
-            	</nav>
+    <!-- Runtime architecture: static semantic modules + CSS HUD layer + vanilla JS controllers. -->
+    <canvas id="starfield" aria-hidden="true"></canvas>
+    <div class="cosmic-noise" aria-hidden="true"></div>
+    <div class="scanline" aria-hidden="true"></div>
+
+    <section class="launch-modal" id="launch-modal" aria-labelledby="launch-title" aria-modal="true" role="dialog">
+      <div class="launch-card terminal-shell" data-tilt>
+        <div class="terminal-topbar">
+          <span>PRE-FLIGHT IDENTIFICATION</span>
+          <span>ACCESS: GUEST</span>
+        </div>
+        <div class="terminal-body">
+          <p class="eyebrow">Incoming traveler detected</p>
+          <h2 id="launch-title">Identify Yourself</h2>
+          <div class="ai-output" id="launch-output" aria-live="polite">
+            <p>Please enter your name to begin the mission briefing.</p>
+          </div>
+          <form class="identity-form" id="identity-form">
+            <label for="traveler-name">Traveler identification</label>
+            <div>
+              <input id="traveler-name" name="traveler-name" autocomplete="name" placeholder="Enter your name">
+              <button type="submit">Board</button>
             </div>
-        </header>
-        <!--================Header Menu Area =================-->
+          </form>
+          <button class="primary-action launch-continue" id="launch-continue" type="button" hidden>Continue</button>
+        </div>
+      </div>
+    </section>
 
-        <!--================Home Banner Area =================-->
-        <section class="home_banner_area">
-           	<div class="container box_1620">
-           		<div class="banner_inner d-flex align-items-center">
-					<div class="banner_content">
-						<div class="media">
-							<div class="d-flex">
-								<img src="img/Subbu1.jpg" alt="">
-							</div>
-							<div class="media-body">
-								<div class="personal_text">
-									<h6>Hello ! I am</h6>
-									<h3>Subrahmanya Gaonkar</h3>
-									<h4>Engineer by Profession and Trader by Passion</h4>
-									<p>I have completed my Bachelor of Engineering in Automation and Robotics.</p>
-									<ul class="list basic_info">
-										<li><a href="#"><i class="lnr lnr-calendar-full"></i> 23rd June, 1997</a></li>
-										<li><a href="#"><i class="lnr lnr-phone-handset"></i> +91 9448323324</a></li>
-										<li><a href="#"><i class="lnr lnr-envelope"></i> subrahmanyamanigadde@gmail.com</a></li>
-										<li><a href="#"><i class="lnr lnr-home"></i> Yellapur, Karnataka</a></li>
-                    <li><a href="img/Resume_Subrahmanya_G_PS.pdf"><i class="lnr lnr-book"></i>View Resume</a></li>
-									</ul>
-                  <p></p>
-                  <h4>Work Experience</h4>
-                  <h6>1. Software Engineer -> SAP LABS (April 2022 - Currently working here)</h6>
-                  <h6>2. Software Engineer -> Tata Consultancy Services (Feb 2020 - Dec 2021)</h6>
-									<ul class="list personal_social">
-                    <h4>Social Connect</h4>
-										<li><a href="https://www.facebook.com/subrahmanya.manigadde"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="https://twitter.com/RoboSubbu?s=09"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="https://www.linkedin.com/in/robosubbu/"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="https://api.whatsapp.com/send?phone=9448323324&text=Hi%20Subrahmanya" ><i class="fa fa-whatsapp"></i></a></li>
-                	</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+    <aside class="holo-nav" aria-label="Portfolio module navigation">
+      <a class="brand-lock" href="#landing" aria-label="Return to landing">
+        <span class="brand-mark">SG</span>
+        <span>Starship OS</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="module-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="module-nav">
+        <a href="#captain-profile" data-module="captain-profile">Captain Profile</a>
+        <a href="#mission-history" data-module="mission-history">Mission History</a>
+        <a href="#tech-arsenal" data-module="tech-arsenal">Tech Arsenal</a>
+        <a href="#engineering-bay" data-module="engineering-bay">Engineering Bay</a>
+        <a href="#data-archive" data-module="data-archive">Data Archive</a>
+        <a href="#communication-deck" data-module="communication-deck">Communication Deck</a>
+      </nav>
+      <button class="console-trigger" type="button" data-console-toggle>Command Console</button>
+    </aside>
+
+    <main id="landing">
+      <section class="hero module-panel" aria-labelledby="terminal-title">
+        <div class="radar-dish" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="terminal-shell" data-tilt>
+          <div class="terminal-topbar">
+            <span>STARSHIP PORTFOLIO OS</span>
+            <span>STATUS: ONLINE</span>
+          </div>
+          <div class="terminal-body">
+            <p class="eyebrow">Orbiting profile: subrahmanyamanigadde.github.io</p>
+            <h1 id="terminal-title">Subrahmanya Gaonkar</h1>
+            <p class="mission-subtitle">Customer Support Engineer at Fivetran, data integration specialist, automation and robotics graduate, and AMFI registered Mutual Fund Distributor.</p>
+            <div class="ai-output" id="ai-output" aria-live="polite">
+              <p>Orbiting profile ready.</p>
+              <p>Mission briefing awaits traveler identification.</p>
             </div>
-        </section>
-        <!--================End Home Banner Area =================-->
+            <div class="mission-actions">
+              <a class="primary-action" href="#captain-profile">Begin Mission Briefing</a>
+              <button class="ghost-action" type="button" data-console-toggle>Open Console</button>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!--================Welcome Area =================-->
-        <section class="welcome_area p_120">
-        	<div class="container">
-        		<div class="row welcome_inner">
-        			<div class="col-lg-6">
-        				<div class="welcome_text">
-        					<h4>About Myself</h4>
-        					<p>I am a passionat engineer with 2 years of Experience in IT domain. Proven abilities in solving complex problems and remaining calm and professional under pressure. Energetic and commited to learning and  futher developing skills</p>
-        					<div class="row">
-        						<div class="col-md-4">
-        							<div class="wel_item">
-        								<i class="lnr lnr-database"></i>
-        								<h4>70%</h4>
-        								<p>Mechanical knowledge</p>
-        							</div>
-        						</div>
-        						<div class="col-md-4">
-        							<div class="wel_item">
-        								<i class="lnr lnr-book"></i>
-        								<h4>60%</h4>
-        								<p>Electronics knowledge</p>
-        							</div>
-        						</div>
-        						<div class="col-md-4">
-        							<div class="wel_item">
-        								<i class="lnr lnr-users"></i>
-        								<h4>75%</h4>
-        								<p>Computer Science knowledge</p>
-        							</div>
-        						</div>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="col-lg-6">
-        				<div class="tools_expert">
-        					<div class="skill_main">
-								<div class="skill_item">
-									<h4>SolidWorks, AutoCAD <span class="counter">85</span>%</h4>
-									<div class="progress_br">
-										<div class="progress">
-											<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-										</div>
-									</div>
-								</div>
-								<div class="skill_item">
-									<h4>PCB Designing and Prototyping <span class="counter">70</span>%</h4>
-									<div class="progress_br">
-										<div class="progress">
-											<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-										</div>
-									</div>
-								</div>
-								<div class="skill_item">
-									<h4>Robot Operating System <span class="counter">60</span>%</h4>
-									<div class="progress_br">
-										<div class="progress">
-											<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-										</div>
-									</div>
-								</div>
-								<div class="skill_item">
-									<h4>JAVA, C, C++,Python, HTML, PHP, MySQL <span class="counter">75</span>%</h4>
-									<div class="progress_br">
-										<div class="progress">
-											<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-										</div>
-									</div>
-								</div>
-								<div class="skill_item">
-									<h4>3D printing and Laser cutting Technology <span class="counter">80</span>%</h4>
-									<div class="progress_br">
-										<div class="progress">
-											<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
-        </section>
-        <!--================End Welcome Area =================-->
+      <section id="captain-profile" class="content-module captain-grid" aria-labelledby="captain-title">
+        <div class="module-heading">
+          <p class="module-code">Module 01</p>
+          <h2 id="captain-title">Captain Profile</h2>
+          <p>Customer support engineer and data integration specialist with a robotics engineering foundation.</p>
+        </div>
+        <div class="portrait-card" data-tilt>
+          <img src="assets/images/captain-subrahmanya.jpg" alt="Portrait of Subrahmanya Gaonkar" loading="lazy">
+          <div class="portrait-readout">
+            <span>Yellapur, Karnataka</span>
+            <span>23 June 1997</span>
+            <span>Remote-first support engineer</span>
+          </div>
+        </div>
+        <article class="glass-panel profile-copy">
+          <h3>Hello, I am Subrahmanya Gaonkar</h3>
+          <p>I am a results-driven IT professional with over six years of experience in technical support, troubleshooting, data integration, and customer service excellence. I currently work as a Customer Support Engineer I at Fivetran India, supporting customers across connectors, secure networking, replication, and incident workflows.</p>
+          <p>My background combines enterprise support, API and SQL fundamentals, ETL concepts, cloud and database systems, and a Bachelor of Engineering in Automation and Robotics. I am also an AMFI registered Mutual Fund Distributor, bringing a disciplined financial advisory and market-awareness layer to my professional profile.</p>
+          <div class="signal-grid professional-signals" aria-label="Professional signals">
+            <div><strong>6+ yrs</strong><span>IT support and service excellence</span></div>
+            <div><strong>400+</strong><span>Fivetran connector support exposure</span></div>
+            <div><strong>AMFI</strong><span>Registered Mutual Fund Distributor</span></div>
+          </div>
+        </article>
+      </section>
 
-        <!--================My Tabs Area =================-->
-        <section class="mytabs_area p_120">
-        	<div class="container">
-        		<div class="tabs_inner">
-					<ul class="nav nav-tabs" id="myTab" role="tablist">
-						<li class="nav-item">
-							<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">My Accomplishments</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">My Education</a>
-						</li>
-					</ul>
-					<div class="tab-content" id="myTabContent">
-						<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-							<ul class="list">
-								<li>
-									<span></span>
-									<div class="media">
-										<div class="d-flex">
-											<p>9 November 2018</p>
-										</div>
-										<div class="media-body">
-											<h4>Global Capstone Design Fair</h4>
-											<p>Participated in E2 – Festa 2018 held in South Korea and <br />got Participation Prize Award for Humanoid robot AJIT 2.0</p>
-										</div>
-									</div>
-							 	</li>
-								<li>
-									<span></span>
-									<div class="media">
-										<div class="d-flex">
-											<p>March 2019&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-										</div>
-										<div class="media-body">
-											<h4>Open House Project Exhibition</h4>
-											<p>Won First Prize in Open House Project Exhibition – 2019 <br />at KLE Technological University, Hubli for Humanoid Robot AJIT 2.0</p>
-										</div>
-									</div>
-								</li>
-								<li>
-								<span></span>
-									<div class="media">
-										<div class="d-flex">
-											<p>March 2019&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-										</div>
-										<div class="media-body">
-											<h4>Making Of Humanoid Workshop</h4>
-											<p>Conducted ‘Making of Humanoid’ workshop at <br />KLE Technological University, Hubli</p>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</div>
-						<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-							<ul class="list">
-								<li>
-									<span></span>
-									<div class="media">
-										<div class="d-flex">
-											<p>2015 - 2019&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-										</div>
-										<div class="media-body">
-											<h4>Bachelor of Engineering</h4>
-											<p>Specialization: Automation and Robotics <br />Institution: KLE Technological University, Hubballi<br />CGPA: 8.03 </p>
-										</div>
-									</div>
-								</li>
-								<li>
-									<span></span>
-									<div class="media">
-										<div class="d-flex">
-											<p>2013 - 2015&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-										</div>
-										<div class="media-body">
-											<h4>Pre University Education</h4>
-											<p>Specialization: Science <br />Institution: YTSS PU College, Yellapur<br />Percentage: 85.83%</p>
-										</div>
-									</div>
-								</li>
-								<li>
-								<span></span>
-									<div class="media">
-										<div class="d-flex">
-											<p>2010 - 2013&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-										</div>
-										<div class="media-body">
-											<h4>Secondary Education(SSLC)</h4>
-											<p>Specialization: Metric <br />Institution: Government High School, Bisgod<br />Percentage: 87.68%</p>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-        		</div>
-        	</div>
-        </section>
-        <!--================End My Tabs Area =================-->
+      <section id="mission-history" class="content-module" aria-labelledby="history-title">
+        <div class="module-heading">
+          <p class="module-code">Module 02</p>
+          <h2 id="history-title">Mission History</h2>
+          <p>Operational timeline across Fivetran data integration, SAP product support, financial production support, robotics exhibitions, workshops, and education.</p>
+        </div>
+        <div class="timeline-grid">
+          <article class="glass-panel">
+            <h3>Work Missions</h3>
+            <ol class="mission-timeline">
+              <li>
+                <time>January 2024 - Present</time>
+                <strong>Customer Support Engineer I, Fivetran India Pvt. Ltd.</strong>
+                <span>Bengaluru, remote. Resolving customer issues across Fivetran connectors, Private Links, SSH tunnels, proxy agents, firewall/endpoint setup, secure data replication, escalations, and incident coordination.</span>
+              </li>
+              <li>
+                <time>April 2022 - January 2024</time>
+                <strong>Product Support Engineer, SAP Labs India via R-Labs</strong>
+                <span>Specialized in SAP PI, SAP NetWeaver XI/PI/PO, component queue management, knowledge base articles, product training, ServiceNow case management, and engineering collaboration through Jira.</span>
+              </li>
+              <li>
+                <time>February 2020 - December 2021</time>
+                <strong>Production Support Analyst, Tata Consultancy Services</strong>
+                <span>Supported Deutsche Bank financial production environments, monitored and debugged data warehouse systems, handled alerts, maintained Confluence documentation, and escalated recurring issues for development fixes.</span>
+              </li>
+            </ol>
+          </article>
+          <article class="glass-panel">
+            <h3>Achievements</h3>
+            <ol class="mission-timeline">
+              <li>
+                <time>9 November 2018</time>
+                <strong>Global Capstone Design Fair</strong>
+                <span>Participated in E2-Festa 2018 in South Korea and received a Participation Prize Award for Humanoid Robot AJIT 2.0.</span>
+              </li>
+              <li>
+                <time>March 2019</time>
+                <strong>Open House Project Exhibition</strong>
+                <span>Won First Prize at KLE Technological University, Hubli for Humanoid Robot AJIT 2.0.</span>
+              </li>
+              <li>
+                <time>March 2019</time>
+                <strong>Making of Humanoid Workshop</strong>
+                <span>Conducted a humanoid robot workshop at KLE Technological University, Hubli.</span>
+              </li>
+            </ol>
+          </article>
+          <article class="glass-panel">
+            <h3>Education Log</h3>
+            <ol class="mission-timeline">
+              <li>
+                <time>2015 - 2019</time>
+                <strong>Bachelor of Engineering</strong>
+                <span>Automation and Robotics, KLE Technological University, Hubballi. CGPA: 8.03.</span>
+              </li>
+              <li>
+                <time>2013 - 2015</time>
+                <strong>Pre University Education</strong>
+                <span>Science, YTSS PU College, Yellapur. Percentage: 85.83%.</span>
+              </li>
+              <li>
+                <time>2010 - 2013</time>
+                <strong>Secondary Education</strong>
+                <span>Government High School, Bisgod. Percentage: 87.68%.</span>
+              </li>
+            </ol>
+          </article>
+        </div>
+      </section>
 
-        <!--================Feature Area =================-->
-        <section class="feature_area p_120">
-        	<div class="container">
-        		<div class="main_title">
-        			<h2>What I do in Free time?</h2>
-        			<p>Time is what we want most, but what we use worst ... !</p>
-        		</div>
-        		<div class="feature_inner row">
-        			<div class="col-lg-4 col-md-6">
-        				<div class="feature_item">
-        					<h4>Website Designing</h4>
-        					<p>In my free time, I will design websites for NGOs, temples, and for social activities. Also I am having experience in Social media campgain and marketing</p>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-6">
-        				<div class="feature_item">
-        					<h4>Gardening and Farming</h4>
-        					<p>I always had a passion for ease of farming with technology. I used to design prototypes and accessories to overcome the problems which I have faced while working in the field.</p>
-        				</div>
-        			</div>
-              <div class="col-lg-4 col-md-6">
-                <div class="feature_item">
-                  <h4>Stock Market Trading</h4>
-                  <p>I am a trader by passion. I used to trade in Indian equity, futures and options. Expertise in technical analysis and scalping.</p>
-                </div>
-              </div>
-        		</div>
-        	</div>
-        </section>
-        <!--================End Feature Area =================-->
+      <section id="tech-arsenal" class="content-module" aria-labelledby="arsenal-title">
+        <div class="module-heading">
+          <p class="module-code">Module 03</p>
+          <h2 id="arsenal-title">Tech Arsenal</h2>
+          <p>A compact control surface for customer support, data integration, incident handling, platforms, programming, and technical documentation.</p>
+        </div>
+        <div class="arsenal-grid">
+          <article class="skill-core glass-panel" data-skill="OPS">
+            <h3>Customer Support and Service Excellence</h3>
+            <div class="skill-bar"><span style="--level: 92%"></span></div>
+            <p>Ticket ownership, clear communication, escalation handling, customer satisfaction, and support across multiple communication channels.</p>
+          </article>
+          <article class="skill-core glass-panel" data-skill="DATA">
+            <h3>API, SQL, ETL and Data Replication</h3>
+            <div class="skill-bar"><span style="--level: 86%"></span></div>
+            <p>Connector troubleshooting, warehouse concepts, replication workflows, and practical investigation across integration systems.</p>
+          </article>
+          <article class="skill-core glass-panel" data-skill="NET">
+            <h3>Networking and Authentication Basics</h3>
+            <div class="skill-bar"><span style="--level: 82%"></span></div>
+            <p>Private Links, SSH tunnels, proxy agents, firewall/endpoint setup, and secure connectivity troubleshooting.</p>
+          </article>
+          <article class="skill-core glass-panel" data-skill="PLAT">
+            <h3>Platforms and Tools</h3>
+            <div class="skill-bar"><span style="--level: 84%"></span></div>
+            <p>Fivetran, SAP PI/PO, Control-M, Zendesk, ServiceNow, Jira, Confluence, monitoring, and automation workflows.</p>
+          </article>
+          <article class="skill-core glass-panel" data-skill="CODE">
+            <h3>Programming and Technical Foundation</h3>
+            <div class="skill-bar"><span style="--level: 78%"></span></div>
+            <p>Java, C, SQL, HTML, database systems, process documentation, and Automation and Robotics engineering fundamentals.</p>
+          </article>
+          <article class="skill-core glass-panel free-time">
+            <h3>Financial and Builder Systems</h3>
+            <ul>
+              <li>AMFI registered Mutual Fund Distributor with referral link placeholder coming soon.</li>
+              <li>Stock market trading interest with technical analysis and scalping experience.</li>
+              <li>Website designing for NGOs, temples, and social activities.</li>
+              <li>Gardening, farming, and practical field-problem prototypes.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
-        <!--================Home Gallery Area =================-->
-        <section class="home_gallery_area p_120">
-        	<div class="container">
-        		<div class="main_title">
-        			<h2>My Projects</h2>
-        			<p>Success is project that's always under construction</p>
-        		</div>
-        		<div class="isotope_fillter">
-        			<ul class="gallery_filter list">
-						<li class="active" data-filter="*"><a href="#"></a></li>
-						<li data-filter=".brand"><a href="#"></a></li>
-						<li data-filter=".manipul"><a href="#"></a></li>
-						<li data-filter=".creative"><a href="#"></a></li>
-						<li data-filter=".design"><a href="#"></a></li>
-					</ul>
-        		</div>
-        	</div>
-        	<div class="container">
-        		<div class="gallery_f_inner row imageGallery1">
-        			<div class="col-lg-4 col-md-4 col-sm-6 brand manipul design print">
-        				<div class="h_gallery_item">
-        					<div class="g_img_item">
-        						<img class="img-fluid" src="img/gallery/project-1.jpg" alt="">
-        						<a class="light" href="img/gallery/project-1.jpg"><img src="img/gallery/icon.png" alt=""></a>
-        					</div>
-        					<div class="g_item_text">
-        						<h4>Humanoid Robot - AJIT</h4>
-        						<p>Ajit, A Social and Intelligent Humanoid Robot. It is capable of walking like a human, obstacle detection and avoidance, speech recognition and response and performs basic gestures like Namaste, handshake, bye. The main objective of this project is to assist oldage people and a person with disabilities.</p>
-                    <h6>Place: KLE Technological University, Hubli</h6>
-                  </div>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-4 col-sm-6 brand manipul creative">
-        				<div class="h_gallery_item">
-        					<div class="g_img_item">
-        						<img class="img-fluid" src="img/gallery/project-2.jpg" alt="">
-        						<a class="light" href="img/gallery/project-2.jpg"><img src="img/gallery/icon.png" alt=""></a>
-        					</div>
-        					<div class="g_item_text">
-        						<h4>Autonomous Unmanned Aerial Vehicle</h4>
-                    <p>It is capable of Autonomous indoor mapping for architectural application. It works on Robot Operating System(ROS). We used Pixhawk and Raspberry pi coordinated flight controller.</p>
-        						<h6>Place: KLE Technological University, Hubli</h6>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-4 col-sm-6 manipul creative design print">
-        				<div class="h_gallery_item">
-        					<div class="g_img_item">
-        						<img class="img-fluid" src="img/gallery/project-3.jpg" alt="">
-        						<a class="light" href="img/gallery/project-3.jpg"><img src="img/gallery/icon.png" alt=""></a>
-        					</div>
-        					<div class="g_item_text">
-                    <h4>Double Pendulum Motion Interpolation</h4>
-                    <p>Closed loop feedback system * Used DC motors as Servo with encoder feedback * Built a robotic arm and achieved precised positioning * Works on Arduino based programming</p>
-        						<h6>Place: KLE Technological University, Hubli</h6>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-4 col-sm-6 brand creative print">
-        				<div class="h_gallery_item">
-        					<div class="g_img_item">
-        						<img class="img-fluid" src="img/gallery/project-4.jpg" alt="">
-        						<a class="light" href="img/gallery/project-4.jpg"><img src="img/gallery/icon.png" alt=""></a>
-        					</div>
-        					<div class="g_item_text">
-        						<h4>Sleep apnea prediction software</h4>
-        						<p>Software built with integration of Java front end and MySQL database * Designed to help people who are suffering from sleep apnea * Data from 4 Sensors is collected and analyzed * Predictions were shown using real time graphs</p>
-                    <h6>Place: KLE Technological University, Hubli</h6>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-4 col-sm-6 brand manipul design">
-        				<div class="h_gallery_item">
-        					<div class="g_img_item">
-        						<img class="img-fluid" src="img/gallery/project-5.jpg" alt="">
-        						<a class="light" href="img/gallery/project-5.jpg"><img src="img/gallery/icon.png" alt=""></a>
-        					</div>
-        					<div class="g_item_text">
-        						<h4>Automatic metal and nonmetal sorting machine</h4>
-        						<p>Built Automatic metal and nonmetal sorting machine using panasonic PLC and a Proximity sensor.</p>
-                    <h6>Place: KLE Technological University, Hubli</h6>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-4 col-sm-6 brand creative">
-        				<div class="h_gallery_item">
-        					<div class="g_img_item">
-        						<img class="img-fluid" src="img/gallery/project-6.jpg" alt="">
-        						<a class="light" href="img/gallery/project-6.jpg"><img src="img/gallery/icon.png" alt=""></a>
-        					</div>
-        					<div class="g_item_text">
-        						<h4>Cost - Effective Gel Electrophoresis Device</h4>
-        						<p>The main constrain was the Low cost equipment. Now we have overcome this problem with slight modification in the design. We have added temperature reduction feature, a overflow valve and aesthetics.</p>
-                    <h6>Place: KLE Technological University, Hubli</h6>
-        					</div>
-        				</div>
-        			</div>
-        		</div>
+      <section id="engineering-bay" class="content-module" aria-labelledby="bay-title">
+        <div class="module-heading">
+          <p class="module-code">Module 04</p>
+          <h2 id="bay-title">Engineering Bay</h2>
+          <p>Interactive star map of preserved project missions from the original portfolio.</p>
+        </div>
+        <div class="project-layout">
+          <div class="star-map glass-panel" aria-label="Project star map">
+            <button class="project-node active" type="button" data-project="0" style="--x: 21%; --y: 24%">AJIT</button>
+            <button class="project-node" type="button" data-project="1" style="--x: 72%; --y: 21%">UAV</button>
+            <button class="project-node" type="button" data-project="2" style="--x: 47%; --y: 43%">ARM</button>
+            <button class="project-node" type="button" data-project="3" style="--x: 80%; --y: 63%">MED</button>
+            <button class="project-node" type="button" data-project="4" style="--x: 28%; --y: 73%">PLC</button>
+            <button class="project-node" type="button" data-project="5" style="--x: 58%; --y: 82%">BIO</button>
+          </div>
+          <article class="project-detail glass-panel" id="project-detail" aria-live="polite">
+            <img id="project-image" src="assets/images/project-ajit.jpg" alt="Humanoid Robot AJIT" loading="lazy">
+            <p class="module-code" id="project-place">KLE Technological University, Hubli</p>
+            <h3 id="project-title">Humanoid Robot - AJIT</h3>
+            <p id="project-description">Ajit, a social and intelligent humanoid robot, is capable of walking like a human, obstacle detection and avoidance, speech recognition and response, and basic gestures like Namaste, handshake, and bye. The objective was to assist old age people and persons with disabilities.</p>
+          </article>
+        </div>
+      </section>
 
-        	</div>
-        </section>
-        <!--================End Home Gallery Area =================-->
+      <section id="data-archive" class="content-module" aria-labelledby="archive-title">
+        <div class="module-heading">
+          <p class="module-code">Module 05</p>
+          <h2 id="archive-title">Data Archive</h2>
+          <p>Resume package and fast recruiter scan points.</p>
+        </div>
+        <div class="archive-grid">
+          <article class="glass-panel">
+            <h3>Resume Capsule</h3>
+            <p>Download the updated professional resume with current Fivetran, SAP, TCS, technical support, and data integration experience.</p>
+            <a class="primary-action" href="assets/documents/Subrahmanya_Gaonkar_Resume.pdf" target="_blank" rel="noopener">View Resume</a>
+          </article>
+          <article class="glass-panel wealthy-deck">
+            <h3>Mutual Fund Distributor Deck</h3>
+            <p>AMFI registered Mutual Fund Distributor partnered through Wealthy. Explore onboarding details or use the referral access link.</p>
+            <div class="wealth-actions">
+              <a class="primary-action" href="https://api.buildwealth.in/dashboards/referral/SUBTC43/" target="_blank" rel="noopener">Referral Link</a>
+              <a class="ghost-action" href="https://wealthy.in/partners/gaonkars/?lang=en" target="_blank" rel="noopener">Wealthy Onboarding</a>
+            </div>
+          </article>
+          <article class="glass-panel status-board">
+            <h3>Quick Signal</h3>
+            <dl>
+              <div><dt>Current Track</dt><dd>Customer Support Engineer I at Fivetran India Pvt. Ltd.</dd></div>
+              <div><dt>Experience</dt><dd>6+ years across technical support, incident management, product support, and data integration.</dd></div>
+              <div><dt>Financial Track</dt><dd>AMFI registered Mutual Fund Distributor with Wealthy referral and onboarding access.</dd></div>
+              <div><dt>Origin Discipline</dt><dd>B.E. in Automation and Robotics from KLE Technological University.</dd></div>
+            </dl>
+          </article>
+        </div>
+      </section>
 
-        <!--================Testimonials Area =================-
-        <section class="testimonials_area p_120">
-        	<div class="container">
-        		<div class="main_title">
-        			<h2>Testimonials</h2>
-        			<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for as low as $.17 each.</p>
-        		</div>
-        		<div class="testi_inner">
-					<div class="testi_slider owl-carousel">
-						<div class="item">
-							<div class="testi_item">
-								<p>As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about it, you travel across her face</p>
-								<h4>Fanny Spencer</h4>
-								<a href="#"><i class="fa fa-star"></i></a>
-								<a href="#"><i class="fa fa-star"></i></a>
-								<a href="#"><i class="fa fa-star"></i></a>
-								<a href="#"><i class="fa fa-star"></i></a>
-								<a href="#"><i class="fa fa-star-half-o"></i></a>
-							</div>
-						</div>
-						<div class="item">
-							<div class="testi_item">
-								<p>As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about it, you travel across her face</p>
-								<h4>Fanny Spencer</h4>
-								<a href="#"><i class="fa fa-star"></i></a>
-								<a href="#"><i class="fa fa-star"></i></a>
-								<a href="#"><i class="fa fa-star"></i></a>
-								<a href="#"><i class="fa fa-star"></i></a>
-								<a href="#"><i class="fa fa-star-half-o"></i></a>
-							</div>
-						</div>
-						<div class="item">
-							<div class="testi_item">
-								<p>As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about it, you travel across her face</p>
-								<h4>Fanny Spencer</h4>
-								<a href="#"><i class="fa fa-star"></i></a>
-								<a href="#"><i class="fa fa-star"></i></a>
-								<a href="#"><i class="fa fa-star"></i></a>
-								<a href="#"><i class="fa fa-star"></i></a>
-								<a href="#"><i class="fa fa-star-half-o"></i></a>
-							</div>
-						</div>
-					</div>
-        		</div>
-        	</div>
-        </section>
-        ================End Testimonials Area =================-->
+      <section id="communication-deck" class="content-module" aria-labelledby="contact-title">
+        <div class="module-heading">
+          <p class="module-code">Module 06</p>
+          <h2 id="contact-title">Communication Deck</h2>
+          <p>Open a channel for engineering, collaboration, opportunities, or portfolio feedback.</p>
+        </div>
+        <div class="contact-grid">
+          <a class="contact-card glass-panel" href="mailto:subrahmanyamanigadde@gmail.com">
+            <span>Email</span>
+            <strong>subrahmanyamanigadde@gmail.com</strong>
+          </a>
+          <a class="contact-card glass-panel" href="tel:+919448323324">
+            <span>Phone</span>
+            <strong>+91 9448323324</strong>
+          </a>
+          <a class="contact-card glass-panel" href="https://www.linkedin.com/in/robosubbu/" target="_blank" rel="noopener">
+            <span>LinkedIn</span>
+            <strong>robosubbu</strong>
+          </a>
+          <a class="contact-card glass-panel" href="https://api.whatsapp.com/send?phone=9448323324&amp;text=Hi%20Subrahmanya" target="_blank" rel="noopener">
+            <span>WhatsApp</span>
+            <strong>Start transmission</strong>
+          </a>
+        </div>
+      </section>
+    </main>
 
-        <!--================Footer Area =================-->
-        <footer class="footer_area p_120">
-        	<div class="container">
-        		<div class="row footer_inner">
-        			<div class="col-lg-5 col-sm-6">
-        				<aside class="f_widget ab_widget">
-        					<div class="f_title">
-        						<h3>About</h3>
-        					</div>
-        					<p>Do you want to be even more successful? Learn to love learning and growth. Put more effort into improving your skills.</p>
-        					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-        				</aside>
-        			</div>
-        			<div class="col-lg-5 col-sm-6">
-        				<aside class="f_widget news_widget">
-        					<div class="f_title">
-        						<h3>Contact Me</h3>
-        					</div>
-        					<p>subrahmanyamanigadde@gmail.com</p>
-        			<!--		<div id="mc_embed_signup">
-                                <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative">
-                                	<div class="input-group d-flex flex-row">
-                                        <input name="EMAIL" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
-                                        <button class="btn sub-btn"><span class="lnr lnr-arrow-right"></span></button>
-                                    </div>
-                                    <div class="mt-10 info"></div>
-                                </form>
-                            </div> -->
-        				</aside>
-        			</div>
-        			<div class="col-lg-2">
-        				<aside class="f_widget social_widget">
-        					<div class="f_title">
-        						<h3>Follow Me</h3>
-        					</div>
-        					<p>Let us be social</p>
-        					<ul class="list">
-                    <li><a href="https://www.facebook.com/subrahmanya.manigadde"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="https://twitter.com/RoboSubbu?s=09"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/robosubbu/"><i class="fa fa-linkedin"></i></a></li>
-        					<!--	<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-        						<li><a href="#"><i class="fa fa-behance"></i></a></li> -->
-        					</ul>
-        				</aside>
-        			</div>
-        		</div>
-        	</div>
-        </footer>
-        <!--================End Footer Area =================-->
+    <section class="command-console" id="command-console" aria-labelledby="console-title" aria-hidden="true">
+      <div class="console-panel" role="dialog" aria-modal="false">
+        <div class="terminal-topbar">
+          <h2 id="console-title">Command Console Mode</h2>
+          <button type="button" data-console-close aria-label="Close command console">Close</button>
+        </div>
+        <div class="console-log" id="console-log" aria-live="polite">
+          <p><strong>AI:</strong> Type <kbd>help</kbd>, <kbd>projects</kbd>, <kbd>skills</kbd>, <kbd>resume</kbd>, <kbd>contact</kbd>, <kbd>fivetran</kbd>, or <kbd>amfi</kbd>.</p>
+        </div>
+        <form id="console-form" class="console-form">
+          <label for="console-input">Command input</label>
+          <input id="console-input" autocomplete="off" placeholder="help">
+          <button type="submit">Run</button>
+        </form>
+      </div>
+    </section>
 
+    <footer class="site-footer">
+      <p>Starship Portfolio OS for Subrahmanya Gaonkar. Built as a static GitHub Pages experience.</p>
+      <p><a href="#landing">Return to terminal</a></p>
+    </footer>
 
-
-
-
-
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="js/popper.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/stellar.js"></script>
-        <script src="vendors/lightbox/simpleLightbox.min.js"></script>
-        <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-        <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
-        <script src="vendors/isotope/isotope.pkgd.min.js"></script>
-        <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-        <script src="vendors/popup/jquery.magnific-popup.min.js"></script>
-        <script src="js/jquery.ajaxchimp.min.js"></script>
-        <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
-        <script src="vendors/counter-up/jquery.counterup.min.js"></script>
-        <script src="js/mail-script.js"></script>
-        <script src="js/theme.js"></script>
-    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r160/three.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="scripts/starship.js" defer></script>
+  </body>
 </html>
