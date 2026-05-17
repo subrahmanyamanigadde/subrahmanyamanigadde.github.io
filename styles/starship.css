@@ -127,6 +127,7 @@ button {
   display: grid;
   place-items: center;
   padding: 24px;
+  overflow: auto;
   background:
     radial-gradient(circle at 50% 32%, rgba(103, 232, 255, 0.18), transparent 32%),
     rgba(0, 4, 12, 0.78);
@@ -407,6 +408,7 @@ h3 {
   background: linear-gradient(135deg, var(--cyan), var(--green));
   font-weight: 800;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .mission-actions {
@@ -918,12 +920,21 @@ kbd {
   }
 
   .hero {
-    padding: 128px 20px 70px;
+    min-height: auto;
+    padding: 116px 20px 70px;
+    place-items: start center;
   }
 
   .content-module {
     width: min(100% - 32px, 760px);
+    margin: 0 auto;
     padding: 80px 0;
+    scroll-margin-top: 112px;
+  }
+
+  .site-footer {
+    width: min(100% - 32px, 760px);
+    margin: 0 auto;
   }
 
   .captain-grid,
@@ -948,6 +959,66 @@ kbd {
 }
 
 @media (max-width: 640px) {
+  body {
+    background:
+      radial-gradient(circle at 50% 8%, rgba(19, 101, 146, 0.26), transparent 34%),
+      radial-gradient(circle at 100% 72%, rgba(66, 255, 206, 0.08), transparent 30%),
+      var(--bg);
+  }
+
+  .scanline {
+    opacity: 0.1;
+  }
+
+  .holo-nav {
+    padding: 10px;
+    background: rgba(3, 12, 24, 0.9);
+  }
+
+  .brand-lock {
+    gap: 8px;
+    font-size: 0.7rem;
+  }
+
+  .brand-mark {
+    width: 28px;
+    height: 28px;
+  }
+
+  #module-nav {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #module-nav a {
+    display: flex;
+    min-height: 42px;
+    align-items: center;
+    padding: 8px;
+    font-size: 0.66rem;
+  }
+
+  .console-trigger {
+    min-height: 42px;
+  }
+
+  .hero {
+    padding: 104px 14px 54px;
+  }
+
+  .terminal-shell,
+  .glass-panel,
+  .portrait-card,
+  .console-panel {
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.38), inset 0 0 28px rgba(103, 232, 255, 0.06);
+    backdrop-filter: blur(14px);
+  }
+
+  .terminal-shell::before,
+  .glass-panel::before,
+  .portrait-card::before {
+    inset: 7px;
+  }
+
   .terminal-topbar,
   .identity-form div,
   .console-form,
@@ -957,11 +1028,69 @@ kbd {
   }
 
   h1 {
-    font-size: clamp(2.65rem, 18vw, 4rem);
+    max-width: 10ch;
+    font-size: clamp(2.35rem, 13vw, 3.35rem);
+    line-height: 0.96;
+  }
+
+  h2 {
+    font-size: clamp(1.9rem, 10vw, 2.8rem);
+  }
+
+  h3 {
+    font-size: 1.12rem;
+  }
+
+  .module-heading {
+    margin-bottom: 22px;
+  }
+
+  .module-heading p:last-child,
+  .mission-subtitle {
+    font-size: 0.98rem;
   }
 
   .terminal-body {
-    padding: 24px;
+    padding: 20px;
+  }
+
+  .ai-output {
+    min-height: 0;
+    margin: 18px 0;
+    padding: 13px;
+    font-size: 0.86rem;
+  }
+
+  .identity-form input,
+  .console-form input {
+    width: 100%;
+    min-height: 46px;
+  }
+
+  .identity-form button,
+  .console-form button,
+  .primary-action,
+  .ghost-action {
+    width: 100%;
+    min-height: 46px;
+    padding: 0 12px;
+    font-size: 0.82rem;
+  }
+
+  .mission-actions,
+  .wealth-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .content-module {
+    width: min(100% - 28px, 560px);
+    padding: 64px 0;
+    scroll-margin-top: 104px;
+  }
+
+  .glass-panel {
+    padding: 20px;
   }
 
   .signal-grid,
@@ -971,23 +1100,114 @@ kbd {
   }
 
   .portrait-card img {
-    min-height: 320px;
+    min-height: 0;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-position: center top;
+  }
+
+  .portrait-readout {
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    padding: 10px;
+    font-size: 0.72rem;
+  }
+
+  .timeline-grid,
+  .archive-grid,
+  .project-layout {
+    gap: 14px;
+  }
+
+  .mission-timeline {
+    gap: 15px;
+  }
+
+  .skill-core::after {
+    top: 18px;
+    right: 18px;
+    font-size: 0.72rem;
+  }
+
+  .free-time ul {
+    padding-left: 18px;
   }
 
   .star-map {
-    min-height: 420px;
+    min-height: 330px;
+  }
+
+  .project-node {
+    width: 48px;
+    height: 48px;
+    font-size: 0.68rem;
+  }
+
+  .project-detail img {
+    aspect-ratio: 4 / 3;
+    margin-bottom: 16px;
   }
 
   .status-board div {
     grid-template-columns: 1fr;
   }
 
+  .contact-card {
+    min-height: 122px;
+  }
+
+  .wealthy-deck::after {
+    right: -4px;
+    bottom: -14px;
+    font-size: clamp(2.3rem, 16vw, 3.5rem);
+  }
+
   .command-console {
     padding: 12px;
+    align-items: stretch;
   }
 
   .launch-modal {
-    padding: 14px;
+    align-items: start;
+    padding: 12px;
+    padding-top: max(18px, env(safe-area-inset-top));
+    padding-bottom: max(18px, env(safe-area-inset-bottom));
+  }
+
+  .launch-card {
+    margin: auto 0;
+  }
+
+  .launch-card h2 {
+    font-size: clamp(2rem, 12vw, 3rem);
+  }
+
+  .site-footer {
+    width: min(100% - 28px, 560px);
+    padding: 28px 0 44px;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-lock span:last-child {
+    max-width: 115px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  #module-nav {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: clamp(2.1rem, 12vw, 2.75rem);
+  }
+
+  .terminal-body,
+  .glass-panel {
+    padding: 17px;
   }
 }
 
