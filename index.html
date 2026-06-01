@@ -3,346 +3,341 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Subrahmanya Gaonkar portfolio: Fivetran Customer Support Engineer, data integration specialist, Automation and Robotics graduate, and AMFI registered Mutual Fund Distributor.">
-    <meta name="theme-color" content="#020712">
-    <meta property="og:title" content="Subrahmanya Gaonkar | Starship AI Terminal">
-    <meta property="og:description" content="A cinematic mission-control portfolio for Subrahmanya Gaonkar.">
+    <meta name="description" content="Subrahmanya Gaonkar resume site: Customer Support Engineer II at Fivetran specializing in data integration, ETL support, incident management, SAP PI/PO, and customer engineering.">
+    <meta name="theme-color" content="#050807">
+    <meta property="og:title" content="Subrahmanya Gaonkar | AI Operations Resume Console">
+    <meta property="og:description" content="A lightweight AI agent operations dashboard for Subrahmanya Gaonkar, Customer Support Engineer II at Fivetran.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://subrahmanyamanigadde.github.io/">
     <meta property="og:image" content="assets/images/captain-subrahmanya.jpg">
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="stylesheet" href="styles/starship.css">
-    <title>Subrahmanya Gaonkar | Starship AI Terminal</title>
+    <link rel="stylesheet" href="styles/ops-console.css">
+    <title>Subrahmanya Gaonkar | AI Operations Resume Console</title>
   </head>
   <body>
-    <a class="skip-link" href="#captain-profile">Skip to portfolio modules</a>
-
-    <!-- Runtime architecture: static semantic modules + CSS HUD layer + vanilla JS controllers. -->
-    <canvas id="starfield" aria-hidden="true"></canvas>
-    <div class="cosmic-noise" aria-hidden="true"></div>
+    <a class="skip-link" href="#agent-profile">Skip to resume content</a>
+    <div class="grid-field" aria-hidden="true"></div>
     <div class="scanline" aria-hidden="true"></div>
 
-    <section class="launch-modal" id="launch-modal" aria-labelledby="launch-title" aria-modal="true" role="dialog">
-      <div class="launch-card terminal-shell" data-tilt>
-        <div class="terminal-topbar">
-          <span>PRE-FLIGHT IDENTIFICATION</span>
-          <span>ACCESS: GUEST</span>
-        </div>
-        <div class="terminal-body">
-          <p class="eyebrow">Incoming traveler detected</p>
-          <h2 id="launch-title">Identify Yourself</h2>
-          <div class="ai-output" id="launch-output" aria-live="polite">
-            <p>Please enter your name to begin the mission briefing.</p>
-          </div>
-          <form class="identity-form" id="identity-form">
-            <label for="traveler-name">Traveler identification</label>
-            <div>
-              <input id="traveler-name" name="traveler-name" autocomplete="name" placeholder="Enter your name">
-              <button type="submit">Board</button>
-            </div>
-          </form>
-          <button class="primary-action launch-continue" id="launch-continue" type="button" hidden>Continue</button>
-        </div>
-      </div>
-    </section>
-
-    <aside class="holo-nav" aria-label="Portfolio module navigation">
-      <a class="brand-lock" href="#landing" aria-label="Return to landing">
+    <header class="topbar">
+      <a class="brand" href="#hero" aria-label="Return to top">
         <span class="brand-mark">SG</span>
-        <span>Starship OS</span>
+        <span>Agent Dossier</span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="module-nav">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
       </button>
-      <nav id="module-nav">
-        <a href="#captain-profile" data-module="captain-profile">Captain Profile</a>
-        <a href="#mission-history" data-module="mission-history">Mission History</a>
-        <a href="#tech-arsenal" data-module="tech-arsenal">Tech Arsenal</a>
-        <a href="#engineering-bay" data-module="engineering-bay">Engineering Bay</a>
-        <a href="#data-archive" data-module="data-archive">Data Archive</a>
-        <a href="#communication-deck" data-module="communication-deck">Communication Deck</a>
+      <nav id="site-nav" aria-label="Primary navigation">
+        <a href="#agent-profile">Profile</a>
+        <a href="#mission-log">Mission Log</a>
+        <a href="#systems-operated">Systems</a>
+        <a href="#technical-arsenal">Arsenal</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact-terminal">Contact</a>
       </nav>
-      <button class="console-trigger" type="button" data-console-toggle>Command Console</button>
-    </aside>
+    </header>
 
-    <main id="landing">
-      <section class="hero module-panel" aria-labelledby="terminal-title">
-        <div class="radar-dish" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
+    <main>
+      <section id="hero" class="hero shell-grid" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="kicker">AGENT PROFILE // DATA INFRASTRUCTURE</p>
+          <h1 id="hero-title">Subrahmanya Gaonkar</h1>
+          <p class="hero-summary">Customer Support Engineer II at Fivetran operating at the intersection of data infrastructure, customer engineering, incident management, automation, and AI-enabled systems thinking.</p>
+          <div class="terminal-window" aria-live="polite">
+            <div class="terminal-bar">
+              <span>resume.init</span>
+              <span class="status-dot">online</span>
+            </div>
+            <pre id="boot-sequence">AGENT: SUBRAHMANYA GAONKAR
+STATUS: ACTIVE
+ROLE: CUSTOMER SUPPORT ENGINEER II
+ORGANIZATION: FIVETRAN
+LOCATION: INDIA
+CLEARANCE: DATA INFRASTRUCTURE<span class="cursor">_</span></pre>
+          </div>
+          <div class="hero-actions">
+            <a class="button primary" href="#agent-profile" data-command="initialize">Initialize Resume</a>
+            <button class="button secondary" type="button" data-palette-open>Command Palette</button>
+          </div>
         </div>
-        <div class="terminal-shell" data-tilt>
-          <div class="terminal-topbar">
-            <span>STARSHIP PORTFOLIO OS</span>
-            <span>STATUS: ONLINE</span>
+
+        <aside class="ops-panel" aria-label="Agent system status">
+          <div class="panel-header">
+            <span>AGENT STATUS</span>
+            <strong>ONLINE</strong>
           </div>
-          <div class="terminal-body">
-            <p class="eyebrow">Orbiting profile: subrahmanyamanigadde.github.io</p>
-            <h1 id="terminal-title"><span>Subrahmanya</span> <span>Gaonkar</span></h1>
-            <p class="mission-subtitle">Customer Support Engineer at Fivetran, data integration specialist, automation and robotics graduate, and AMFI registered Mutual Fund Distributor.</p>
-            <div class="ai-output" id="ai-output" aria-live="polite">
-              <p>Orbiting profile ready.</p>
-              <p>Mission briefing awaits traveler identification.</p>
-            </div>
-            <div class="mission-actions">
-              <a class="primary-action" href="#captain-profile">Begin Mission Briefing</a>
-              <button class="ghost-action" type="button" data-console-toggle>Open Console</button>
-            </div>
+          <dl class="status-grid">
+            <div><dt>Experience</dt><dd>6+ years</dd></div>
+            <div><dt>Reliability</dt><dd>99.9%</dd></div>
+            <div><dt>Learning Mode</dt><dd>Enabled</dd></div>
+            <div><dt>Curiosity Engine</dt><dd>Active</dd></div>
+          </dl>
+          <div class="current-objectives">
+            <h2>Current Objectives</h2>
+            <ul>
+              <li>Resolve complex customer escalations with calm ownership.</li>
+              <li>Support Fivetran and dbt ecosystem data workflows.</li>
+              <li>Improve data pipeline reliability and documentation.</li>
+              <li>Build automation-minded support practices.</li>
+            </ul>
           </div>
+        </aside>
+      </section>
+
+      <section id="agent-profile" class="section agent-dossier" aria-labelledby="profile-title">
+        <div class="section-heading">
+          <p class="kicker">01 // AGENT PROFILE</p>
+          <h2 id="profile-title">Engineer Operating Data Systems</h2>
+        </div>
+        <div class="dossier-grid">
+          <article class="card profile-card">
+            <div class="portrait-frame">
+              <img src="assets/images/captain-subrahmanya.jpg" alt="Portrait of Subrahmanya Gaonkar" loading="lazy">
+              <span>Verified Operator</span>
+            </div>
+            <div class="dossier-copy">
+              <p class="kicker">Professional Dossier</p>
+              <h3>Customer engineering operator for data infrastructure teams.</h3>
+              <p>Results-driven IT professional with over six years of experience in technical support, troubleshooting, customer support, product support, production support, incident handling, SAP integration environments, and modern data integration workflows.</p>
+              <p>Currently a Customer Support Engineer II at Fivetran India, supporting enterprise customers across connectors, secure networking, replication, endpoint/firewall setups, incidents, and escalations. Background includes SAP PI/PO support, financial production support, and a Bachelor of Engineering in Automation and Robotics.</p>
+              <dl class="identity-grid">
+                <div><dt>Location</dt><dd>Yellapur, Karnataka, India</dd></div>
+                <div><dt>Current Role</dt><dd>Customer Support Engineer II</dd></div>
+                <div><dt>Organization</dt><dd>Fivetran India Pvt. Ltd.</dd></div>
+                <div><dt>Financial Track</dt><dd>AMFI Registered Mutual Fund Distributor</dd></div>
+              </dl>
+            </div>
+          </article>
+          <aside class="card network-card">
+            <div class="panel-header">
+              <span>LIVE NETWORK</span>
+              <strong id="network-pulse">SYNC 00</strong>
+            </div>
+            <div class="network-map" aria-label="Animated data operations network">
+              <span class="node core" style="--x:50%;--y:46%">SG</span>
+              <span class="node" style="--x:20%;--y:22%">FIV</span>
+              <span class="node" style="--x:78%;--y:20%">DBT</span>
+              <span class="node" style="--x:22%;--y:76%">SQL</span>
+              <span class="node" style="--x:78%;--y:74%">SAP</span>
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M50 46 L20 22 L78 20 L50 46 L22 76 L78 74 L50 46" />
+                <path class="pulse-line" d="M20 22 L50 46 L78 74" />
+              </svg>
+            </div>
+            <p>Connector support, escalation triage, SAP integration context, SQL investigation, and customer engineering signals connected in one operating model.</p>
+          </aside>
         </div>
       </section>
 
-      <section id="captain-profile" class="content-module captain-grid" aria-labelledby="captain-title">
-        <div class="module-heading">
-          <p class="module-code">Module 01</p>
-          <h2 id="captain-title">Captain Profile</h2>
-          <p>Customer support engineer and data integration specialist with a robotics engineering foundation.</p>
+      <section id="mission-log" class="section" aria-labelledby="mission-title">
+        <div class="section-heading">
+          <p class="kicker">02 // MISSION LOG</p>
+          <h2 id="mission-title">Operational Experience</h2>
+          <p>Company missions presented as production operations logs with outcomes, systems, and incident context.</p>
         </div>
-        <div class="portrait-card" data-tilt>
-          <img src="assets/images/captain-subrahmanya.jpg" alt="Portrait of Subrahmanya Gaonkar" loading="lazy">
-          <div class="portrait-readout">
-            <span>Yellapur, Karnataka</span>
-            <span>23 June 1997</span>
-            <span>Remote-first support engineer</span>
-          </div>
+        <div class="mission-list">
+          <article class="mission-card">
+            <div class="mission-meta">
+              <span>MISSION 04</span>
+              <time>Feb 2026 - Present</time>
+            </div>
+            <h3>Customer Support Engineer II</h3>
+            <p class="organization">Fivetran India Pvt. Ltd. // Bengaluru Remote</p>
+            <p>Promoted to Customer Support Engineer II, continuing advanced support for data integration, connector troubleshooting, secure networking, customer escalations, and incident coordination.</p>
+            <ul class="impact-list">
+              <li>Operate across connector support, replication workflows, endpoint/firewall setup, Private Links, SSH tunnels, and proxy agents.</li>
+              <li>Support enterprise data teams with clear triage, precise communication, and production-minded follow-through.</li>
+            </ul>
+            <div class="chips"><span>Fivetran</span><span>ETL</span><span>Networking</span><span>Escalations</span><span>Data Replication</span></div>
+          </article>
+
+          <article class="mission-card">
+            <div class="mission-meta">
+              <span>MISSION 03</span>
+              <time>Jan 2024 - Feb 2026</time>
+            </div>
+            <h3>Customer Support Engineer I</h3>
+            <p class="organization">Fivetran India Pvt. Ltd. // Bengaluru Remote</p>
+            <p>Resolved customer issues across Fivetran connectors and secure data replication systems while maintaining strong SLA and CSAT performance.</p>
+            <ul class="impact-list">
+              <li>Resolved 70+ support tickets per month across low to moderate complexity.</li>
+              <li>Investigated and resolved issues across 400+ Fivetran connectors.</li>
+              <li>Maintained 100% CSAT for 12 consecutive months with consistent positive feedback.</li>
+              <li>Reported product bugs and improvement opportunities through Jira in collaboration with engineering teams.</li>
+            </ul>
+            <div class="chips"><span>Zendesk</span><span>Jira</span><span>Connectors</span><span>CSAT</span><span>Customer Engineering</span></div>
+          </article>
+
+          <article class="mission-card">
+            <div class="mission-meta">
+              <span>MISSION 02</span>
+              <time>Apr 2022 - Jan 2024</time>
+            </div>
+            <h3>Product Support Engineer</h3>
+            <p class="organization">SAP Labs India via R-Labs // Bengaluru Remote</p>
+            <p>Specialized in SAP PI, SAP NetWeaver XI/PI/PO, and integration environment troubleshooting for enterprise customers.</p>
+            <ul class="impact-list">
+              <li>Managed 130+ components, improving queue management and reducing response time by 20%.</li>
+              <li>Created and maintained knowledge base articles and conducted product training sessions.</li>
+              <li>Used ServiceNow for case management, incident resolution, and support workflow discipline.</li>
+            </ul>
+            <div class="chips"><span>SAP PI/PO</span><span>ServiceNow</span><span>NetWeaver</span><span>Knowledge Base</span></div>
+          </article>
+
+          <article class="mission-card">
+            <div class="mission-meta">
+              <span>MISSION 01</span>
+              <time>Feb 2020 - Dec 2021</time>
+            </div>
+            <h3>Production Support Analyst</h3>
+            <p class="organization">Tata Consultancy Services // Deutsche Bank Environment</p>
+            <p>Supported financial production environments with monitoring, debugging, incident handling, and cross-functional recovery coordination.</p>
+            <ul class="impact-list">
+              <li>Monitored financial data warehouse systems and helped minimize downtime during incidents.</li>
+              <li>Handled alerts from system, network, application, and database monitoring tools.</li>
+              <li>Maintained Confluence support pages and reported recurring issues for development-level fixes.</li>
+            </ul>
+            <div class="chips"><span>Production Support</span><span>Control-M</span><span>Monitoring</span><span>Confluence</span></div>
+          </article>
         </div>
-        <article class="glass-panel profile-copy">
-          <h3>Hello, I am Subrahmanya Gaonkar</h3>
-          <p>I am a results-driven IT professional with over six years of experience in technical support, troubleshooting, data integration, and customer service excellence. I currently work as a Customer Support Engineer I at Fivetran India, supporting customers across connectors, secure networking, replication, and incident workflows.</p>
-          <p>My background combines enterprise support, API and SQL fundamentals, ETL concepts, cloud and database systems, and a Bachelor of Engineering in Automation and Robotics. I am also an AMFI registered Mutual Fund Distributor, bringing a disciplined financial advisory and market-awareness layer to my professional profile.</p>
-          <div class="signal-grid professional-signals" aria-label="Professional signals">
-            <div><strong>6+ yrs</strong><span>IT support and service excellence</span></div>
-            <div><strong>400+</strong><span>Fivetran connector support exposure</span></div>
-            <div><strong>AMFI</strong><span>Registered Mutual Fund Distributor</span></div>
+      </section>
+
+      <section id="systems-operated" class="section shell-grid" aria-labelledby="systems-title">
+        <div class="section-heading">
+          <p class="kicker">03 // SYSTEMS OPERATED</p>
+          <h2 id="systems-title">Data Infrastructure Missions</h2>
+          <p>Operational context for modern data teams, pipeline reliability, and support workflows.</p>
+        </div>
+        <div class="systems-map card">
+          <div class="system-node core">Fivetran</div>
+          <div class="system-node">dbt ecosystem</div>
+          <div class="system-node">Snowflake</div>
+          <div class="system-node">BigQuery</div>
+          <div class="system-node">Redshift</div>
+          <div class="system-node">Databricks</div>
+          <div class="system-node">Private Link</div>
+          <div class="system-node">SSH Tunnels</div>
+          <div class="system-node">Proxy Agents</div>
+        </div>
+        <aside class="card">
+          <h3>Current Mission</h3>
+          <p>Help enterprise customers keep data movement reliable by investigating connector behavior, secure connectivity, endpoint constraints, replication issues, and product signals that need engineering attention.</p>
+          <div class="health-grid">
+            <div><span>Pipeline Mindset</span><strong>Reliable</strong></div>
+            <div><span>Escalation Mode</span><strong>Calm</strong></div>
+            <div><span>Documentation</span><strong>Active</strong></div>
           </div>
+        </aside>
+      </section>
+
+      <section id="technical-arsenal" class="section" aria-labelledby="arsenal-title">
+        <div class="section-heading">
+          <p class="kicker">04 // TECHNICAL ARSENAL</p>
+          <h2 id="arsenal-title">Command Chips</h2>
+        </div>
+        <div class="arsenal-groups">
+          <article class="card arsenal-card"><h3>Data Systems</h3><div class="chips"><span>Fivetran</span><span>ETL</span><span>Data Replication</span><span>Warehousing</span><span>API Integration</span></div></article>
+          <article class="card arsenal-card"><h3>Automation</h3><div class="chips"><span>Monitoring</span><span>Control-M</span><span>Process Improvement</span><span>Support Automation</span></div></article>
+          <article class="card arsenal-card"><h3>Cloud & Networking</h3><div class="chips"><span>Private Links</span><span>SSH Tunnels</span><span>Proxy Agents</span><span>Firewall Setup</span><span>Authentication Basics</span></div></article>
+          <article class="card arsenal-card"><h3>Databases</h3><div class="chips"><span>SQL</span><span>MySQL</span><span>Warehouses</span><span>Financial Data Systems</span></div></article>
+          <article class="card arsenal-card"><h3>Observability</h3><div class="chips"><span>Zendesk</span><span>ServiceNow</span><span>Jira</span><span>Confluence</span><span>Status Updates</span></div></article>
+          <article class="card arsenal-card"><h3>AI Tools</h3><div class="chips"><span>AI-assisted triage</span><span>Prompting</span><span>Documentation drafting</span><span>Learning workflows</span></div></article>
+        </div>
+      </section>
+
+      <section id="certifications" class="section shell-grid" aria-labelledby="cert-title">
+        <div class="section-heading">
+          <p class="kicker">05 // CERTIFICATIONS</p>
+          <h2 id="cert-title">Credentials & Education</h2>
+        </div>
+        <article class="card">
+          <h3>AMFI Registered Mutual Fund Distributor</h3>
+          <p>Registered distributor with Wealthy referral and onboarding access.</p>
+          <div class="actions-inline">
+            <a class="button primary" href="https://api.buildwealth.in/dashboards/referral/SUBTC43/" target="_blank" rel="noopener">Referral Access</a>
+            <a class="button secondary" href="https://wealthy.in/partners/gaonkars/?lang=en" target="_blank" rel="noopener">Wealthy Partner Page</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Education</h3>
+          <p>Bachelor of Engineering in Automation and Robotics, KLE Technological University, Hubballi. CGPA: 8.03.</p>
+          <p>Pre-University Science, YTSS PU College, Yellapur. Percentage: 85.83%.</p>
         </article>
       </section>
 
-      <section id="mission-history" class="content-module" aria-labelledby="history-title">
-        <div class="module-heading">
-          <p class="module-code">Module 02</p>
-          <h2 id="history-title">Mission History</h2>
-          <p>Operational timeline across Fivetran data integration, SAP product support, financial production support, robotics exhibitions, workshops, and education.</p>
+      <section id="achievements" class="section" aria-labelledby="achievements-title">
+        <div class="section-heading">
+          <p class="kicker">06 // KEY ACHIEVEMENTS</p>
+          <h2 id="achievements-title">Signals Beyond Support</h2>
         </div>
-        <div class="timeline-grid">
-          <article class="glass-panel">
-            <h3>Work Missions</h3>
-            <ol class="mission-timeline">
-              <li>
-                <time>January 2024 - Present</time>
-                <strong>Customer Support Engineer I, Fivetran India Pvt. Ltd.</strong>
-                <span>Bengaluru, remote. Resolving customer issues across Fivetran connectors, Private Links, SSH tunnels, proxy agents, firewall/endpoint setup, secure data replication, escalations, and incident coordination.</span>
-              </li>
-              <li>
-                <time>April 2022 - January 2024</time>
-                <strong>Product Support Engineer, SAP Labs India via R-Labs</strong>
-                <span>Specialized in SAP PI, SAP NetWeaver XI/PI/PO, component queue management, knowledge base articles, product training, ServiceNow case management, and engineering collaboration through Jira.</span>
-              </li>
-              <li>
-                <time>February 2020 - December 2021</time>
-                <strong>Production Support Analyst, Tata Consultancy Services</strong>
-                <span>Supported Deutsche Bank financial production environments, monitored and debugged data warehouse systems, handled alerts, maintained Confluence documentation, and escalated recurring issues for development fixes.</span>
-              </li>
-            </ol>
-          </article>
-          <article class="glass-panel">
-            <h3>Achievements</h3>
-            <ol class="mission-timeline">
-              <li>
-                <time>9 November 2018</time>
-                <strong>Global Capstone Design Fair</strong>
-                <span>Participated in E2-Festa 2018 in South Korea and received a Participation Prize Award for Humanoid Robot AJIT 2.0.</span>
-              </li>
-              <li>
-                <time>March 2019</time>
-                <strong>Open House Project Exhibition</strong>
-                <span>Won First Prize at KLE Technological University, Hubli for Humanoid Robot AJIT 2.0.</span>
-              </li>
-              <li>
-                <time>March 2019</time>
-                <strong>Making of Humanoid Workshop</strong>
-                <span>Conducted a humanoid robot workshop at KLE Technological University, Hubli.</span>
-              </li>
-            </ol>
-          </article>
-          <article class="glass-panel">
-            <h3>Education Log</h3>
-            <ol class="mission-timeline">
-              <li>
-                <time>2015 - 2019</time>
-                <strong>Bachelor of Engineering</strong>
-                <span>Automation and Robotics, KLE Technological University, Hubballi. CGPA: 8.03.</span>
-              </li>
-              <li>
-                <time>2013 - 2015</time>
-                <strong>Pre University Education</strong>
-                <span>Science, YTSS PU College, Yellapur. Percentage: 85.83%.</span>
-              </li>
-              <li>
-                <time>2010 - 2013</time>
-                <strong>Secondary Education</strong>
-                <span>Government High School, Bisgod. Percentage: 87.68%.</span>
-              </li>
-            </ol>
-          </article>
+        <div class="achievement-grid">
+          <article class="card"><h3>Global Capstone Design Fair</h3><p>Participated in E2-Festa 2018 in South Korea and received a Participation Prize Award for Humanoid Robot AJIT 2.0.</p></article>
+          <article class="card"><h3>Open House Project Exhibition</h3><p>Won First Prize at KLE Technological University, Hubli for Humanoid Robot AJIT 2.0.</p></article>
+          <article class="card"><h3>Humanoid Workshop</h3><p>Conducted a “Making of Humanoid” workshop at KLE Technological University, Hubli.</p></article>
         </div>
       </section>
 
-      <section id="tech-arsenal" class="content-module" aria-labelledby="arsenal-title">
-        <div class="module-heading">
-          <p class="module-code">Module 03</p>
-          <h2 id="arsenal-title">Tech Arsenal</h2>
-          <p>A compact control surface for customer support, data integration, incident handling, platforms, programming, and technical documentation.</p>
+      <section id="global-operations" class="section shell-grid" aria-labelledby="global-title">
+        <div class="section-heading">
+          <p class="kicker">07 // GLOBAL OPERATIONS</p>
+          <h2 id="global-title">Remote-Ready Operator</h2>
         </div>
-        <div class="arsenal-grid">
-          <article class="skill-core glass-panel" data-skill="OPS">
-            <h3>Customer Support and Service Excellence</h3>
-            <div class="skill-bar"><span style="--level: 92%"></span></div>
-            <p>Ticket ownership, clear communication, escalation handling, customer satisfaction, and support across multiple communication channels.</p>
-          </article>
-          <article class="skill-core glass-panel" data-skill="DATA">
-            <h3>API, SQL, ETL and Data Replication</h3>
-            <div class="skill-bar"><span style="--level: 86%"></span></div>
-            <p>Connector troubleshooting, warehouse concepts, replication workflows, and practical investigation across integration systems.</p>
-          </article>
-          <article class="skill-core glass-panel" data-skill="NET">
-            <h3>Networking and Authentication Basics</h3>
-            <div class="skill-bar"><span style="--level: 82%"></span></div>
-            <p>Private Links, SSH tunnels, proxy agents, firewall/endpoint setup, and secure connectivity troubleshooting.</p>
-          </article>
-          <article class="skill-core glass-panel" data-skill="PLAT">
-            <h3>Platforms and Tools</h3>
-            <div class="skill-bar"><span style="--level: 84%"></span></div>
-            <p>Fivetran, SAP PI/PO, Control-M, Zendesk, ServiceNow, Jira, Confluence, monitoring, and automation workflows.</p>
-          </article>
-          <article class="skill-core glass-panel" data-skill="CODE">
-            <h3>Programming and Technical Foundation</h3>
-            <div class="skill-bar"><span style="--level: 78%"></span></div>
-            <p>Java, C, SQL, HTML, database systems, process documentation, and Automation and Robotics engineering fundamentals.</p>
-          </article>
-          <article class="skill-core glass-panel free-time">
-            <h3>Financial and Builder Systems</h3>
-            <ul>
-              <li>AMFI registered Mutual Fund Distributor with referral link placeholder coming soon.</li>
-              <li>Stock market trading interest with technical analysis and scalping experience.</li>
-              <li>Website designing for NGOs, temples, and social activities.</li>
-              <li>Gardening, farming, and practical field-problem prototypes.</li>
-            </ul>
-          </article>
-        </div>
+        <article class="card">
+          <h3>Operating Mode</h3>
+          <p>Remote-first professional with experience supporting enterprise customers, cross-functional engineering teams, status updates, knowledge base work, and rotational support coverage.</p>
+        </article>
+        <article class="card">
+          <h3>Languages</h3>
+          <div class="chips"><span>English Fluent</span><span>Kannada Fluent</span><span>Hindi Intermediate</span><span>Sanskrit Basic</span></div>
+        </article>
       </section>
 
-      <section id="engineering-bay" class="content-module" aria-labelledby="bay-title">
-        <div class="module-heading">
-          <p class="module-code">Module 04</p>
-          <h2 id="bay-title">Engineering Bay</h2>
-          <p>Interactive star map of preserved project missions from the original portfolio.</p>
+      <section id="contact-terminal" class="section" aria-labelledby="contact-title">
+        <div class="section-heading">
+          <p class="kicker">08 // CONTACT TERMINAL</p>
+          <h2 id="contact-title">connect --agent subrahmanya</h2>
         </div>
-        <div class="project-layout">
-          <div class="star-map glass-panel" aria-label="Project star map">
-            <button class="project-node active" type="button" data-project="0" style="--x: 21%; --y: 24%">AJIT</button>
-            <button class="project-node" type="button" data-project="1" style="--x: 72%; --y: 21%">UAV</button>
-            <button class="project-node" type="button" data-project="2" style="--x: 47%; --y: 43%">ARM</button>
-            <button class="project-node" type="button" data-project="3" style="--x: 80%; --y: 63%">MED</button>
-            <button class="project-node" type="button" data-project="4" style="--x: 28%; --y: 73%">PLC</button>
-            <button class="project-node" type="button" data-project="5" style="--x: 58%; --y: 82%">BIO</button>
+        <div class="contact-terminal card">
+          <pre>EMAIL ........ READY
+LINKEDIN ..... READY
+GITHUB ....... READY
+WHATSAPP ..... READY
+SOCIAL ....... READY</pre>
+          <div class="contact-grid">
+            <a href="mailto:subrahmanyamanigadde@gmail.com"><span>Email</span><strong>subrahmanyamanigadde@gmail.com</strong></a>
+            <a href="https://www.linkedin.com/in/subrahmanyagaonkar" target="_blank" rel="noopener"><span>LinkedIn</span><strong>subrahmanyagaonkar</strong></a>
+            <a href="https://github.com/subrahmanyamanigadde" target="_blank" rel="noopener"><span>GitHub</span><strong>subrahmanyamanigadde</strong></a>
+            <a href="https://api.whatsapp.com/send?phone=9448323324&amp;text=Hi%20Subrahmanya" target="_blank" rel="noopener"><span>WhatsApp</span><strong>Start secure channel</strong></a>
+            <a href="https://www.facebook.com/subrahmanya.manigadde" target="_blank" rel="noopener"><span>Facebook</span><strong>subrahmanya.manigadde</strong></a>
+            <a href="https://www.instagram.com/subrahmanya_manigadde/" target="_blank" rel="noopener"><span>Instagram</span><strong>subrahmanya_manigadde</strong></a>
           </div>
-          <article class="project-detail glass-panel" id="project-detail" aria-live="polite">
-            <img id="project-image" src="assets/images/project-ajit.jpg" alt="Humanoid Robot AJIT" loading="lazy">
-            <p class="module-code" id="project-place">KLE Technological University, Hubli</p>
-            <h3 id="project-title">Humanoid Robot - AJIT</h3>
-            <p id="project-description">Ajit, a social and intelligent humanoid robot, is capable of walking like a human, obstacle detection and avoidance, speech recognition and response, and basic gestures like Namaste, handshake, and bye. The objective was to assist old age people and persons with disabilities.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="data-archive" class="content-module" aria-labelledby="archive-title">
-        <div class="module-heading">
-          <p class="module-code">Module 05</p>
-          <h2 id="archive-title">Data Archive</h2>
-          <p>Resume package and fast recruiter scan points.</p>
-        </div>
-        <div class="archive-grid">
-          <article class="glass-panel">
-            <h3>Resume Capsule</h3>
-            <p>Download the updated professional resume with current Fivetran, SAP, TCS, technical support, and data integration experience.</p>
-            <a class="primary-action" href="assets/documents/Subrahmanya_Gaonkar_Resume.pdf" target="_blank" rel="noopener">View Resume</a>
-          </article>
-          <article class="glass-panel wealthy-deck">
-            <h3>Mutual Fund Distributor Deck</h3>
-            <p>AMFI registered Mutual Fund Distributor partnered through Wealthy. Explore onboarding details or use the referral access link.</p>
-            <div class="wealth-actions">
-              <a class="primary-action" href="https://api.buildwealth.in/dashboards/referral/SUBTC43/" target="_blank" rel="noopener">Referral Link</a>
-              <a class="ghost-action" href="https://wealthy.in/partners/gaonkars/?lang=en" target="_blank" rel="noopener">Wealthy Onboarding</a>
-            </div>
-          </article>
-          <article class="glass-panel status-board">
-            <h3>Quick Signal</h3>
-            <dl>
-              <div><dt>Current Track</dt><dd>Customer Support Engineer I at Fivetran India Pvt. Ltd.</dd></div>
-              <div><dt>Experience</dt><dd>6+ years across technical support, incident management, product support, and data integration.</dd></div>
-              <div><dt>Financial Track</dt><dd>AMFI registered Mutual Fund Distributor with Wealthy referral and onboarding access.</dd></div>
-              <div><dt>Origin Discipline</dt><dd>B.E. in Automation and Robotics from KLE Technological University.</dd></div>
-            </dl>
-          </article>
-        </div>
-      </section>
-
-      <section id="communication-deck" class="content-module" aria-labelledby="contact-title">
-        <div class="module-heading">
-          <p class="module-code">Module 06</p>
-          <h2 id="contact-title">Communication Deck</h2>
-          <p>Open a channel for engineering, collaboration, opportunities, or portfolio feedback.</p>
-        </div>
-        <div class="contact-grid">
-          <a class="contact-card glass-panel" href="mailto:subrahmanyamanigadde@gmail.com">
-            <span>Email</span>
-            <strong>subrahmanyamanigadde@gmail.com</strong>
-          </a>
-          <a class="contact-card glass-panel" href="tel:+919448323324">
-            <span>Phone</span>
-            <strong>+91 9448323324</strong>
-          </a>
-          <a class="contact-card glass-panel" href="https://www.linkedin.com/in/robosubbu/" target="_blank" rel="noopener">
-            <span>LinkedIn</span>
-            <strong>robosubbu</strong>
-          </a>
-          <a class="contact-card glass-panel" href="https://api.whatsapp.com/send?phone=9448323324&amp;text=Hi%20Subrahmanya" target="_blank" rel="noopener">
-            <span>WhatsApp</span>
-            <strong>Start transmission</strong>
-          </a>
+          <a class="button primary" href="assets/documents/Subrahmanya_Gaonkar_Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
         </div>
       </section>
     </main>
 
-    <section class="command-console" id="command-console" aria-labelledby="console-title" aria-hidden="true">
-      <div class="console-panel" role="dialog" aria-modal="false">
-        <div class="terminal-topbar">
-          <h2 id="console-title">Command Console Mode</h2>
-          <button type="button" data-console-close aria-label="Close command console">Close</button>
+    <section class="command-palette" id="command-palette" aria-labelledby="palette-title" aria-hidden="true">
+      <div class="palette-card" role="dialog" aria-modal="false">
+        <div class="terminal-bar">
+          <h2 id="palette-title">Command Palette</h2>
+          <button type="button" data-palette-close aria-label="Close command palette">close</button>
         </div>
-        <div class="console-log" id="console-log" aria-live="polite">
-          <p><strong>AI:</strong> Type <kbd>help</kbd>, <kbd>projects</kbd>, <kbd>skills</kbd>, <kbd>resume</kbd>, <kbd>contact</kbd>, <kbd>fivetran</kbd>, or <kbd>amfi</kbd>.</p>
+        <div class="palette-log" id="palette-log" aria-live="polite">
+          <p>Type <kbd>help</kbd>, <kbd>experience</kbd>, <kbd>skills</kbd>, <kbd>certifications</kbd>, <kbd>contact</kbd>, or <kbd>resume</kbd>.</p>
         </div>
-        <form id="console-form" class="console-form">
-          <label for="console-input">Command input</label>
-          <input id="console-input" autocomplete="off" placeholder="help">
+        <form class="palette-form" id="palette-form">
+          <label for="palette-input">agent command</label>
+          <input id="palette-input" autocomplete="off" placeholder="help">
           <button type="submit">Run</button>
         </form>
       </div>
     </section>
 
-    <footer class="site-footer">
-      <p>Starship Portfolio OS for Subrahmanya Gaonkar. Built as a static GitHub Pages experience.</p>
-      <p><a href="#landing">Return to terminal</a></p>
+    <footer class="footer">
+      <p>AI Operations Resume Console // Static GitHub Pages deployment.</p>
+      <a href="#hero">Return to top</a>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r160/three.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-    <script src="scripts/starship.js" defer></script>
+    <script src="scripts/ops-console.js" defer></script>
   </body>
 </html>
